@@ -16,9 +16,9 @@ def main(files_list):
     for i in files_list:
         input_path = os.path.join(source_dir, i)
         output_path = os.path.join(result_dir, i)
-        command = sips --resampleWidth 200 input_path cp output_path
+        command_sips = 'sips --resampleWidth 200 input_path’ command_cp = 'cp output_path’
         os.chdir(os.path.dirname(os.path.abspath(__file__)))
-        subprocess.run(command)
+        subprocess.run(command_sips, command_cp)
     print("----end program")
 
 
